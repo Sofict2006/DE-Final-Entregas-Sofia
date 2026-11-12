@@ -6,4 +6,4 @@ crash.log
 .aws/
 credentials
 *.pem
-.env
+.env*:Zone.Identifier
