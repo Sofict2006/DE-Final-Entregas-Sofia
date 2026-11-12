@@ -69,12 +69,4 @@ aws s3 rm s3://<bucket> --recursive
 cd infraestructura
 terraform destroy -auto-approve -no-color 2>&1 | tee ../evidencias/eliminacion_terraform.txt
 ```
-Resultado: 7 recursos destruidos.
-
-## Estructura
-- `infraestructura/`: código Terraform (`principal.tf`, `variables.tf`, `salidas.tf`).
-- `consultas/`: SQL de Athena.
-- `resultados/inicial` y `resultados/final`: resultados obtenidos en Athena.
-- `evidencias/`: apply, outputs, ejecuciones de Athena y destroy.
-- `respuestas.md`: preguntas conceptuales.
-- `data/` y `resultados_esperados/`: material suministrado, sin modificar.
+Resultado: 5 recursos destruidos. Los 2 objetos de prefijo ya habían sido eliminados al vaciar el bucket, así que Terraform los retiró del estado al refrescarlo. Se verificó con la CLI que el bucket, la base de Glue y el workgroup ya no existen.
