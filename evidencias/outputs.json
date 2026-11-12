@@ -1,0 +1,27 @@
+{
+  "base_datos": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas_db_gr01_user4"
+  },
+  "bucket": {
+    "sensitive": false,
+    "type": "string",
+    "value": "de-gr01-user-4-entregas-20261112"
+  },
+  "tabla": {
+    "sensitive": false,
+    "type": "string",
+    "value": "entregas"
+  },
+  "ubicacion_resultados": {
+    "sensitive": false,
+    "type": "string",
+    "value": "s3://de-gr01-user-4-entregas-20261112/resultados-athena/"
+  },
+  "workgroup": {
+    "sensitive": false,
+    "type": "string",
+    "value": "wg-entregas-gr01-user4"
+  }
+}
